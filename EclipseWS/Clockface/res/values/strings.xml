@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Clockface</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="clockface_2_2">Clockface 2x2</string>
+    <string name="clockface_3_3">Clockface 3x3</string>
+
+</resources>
