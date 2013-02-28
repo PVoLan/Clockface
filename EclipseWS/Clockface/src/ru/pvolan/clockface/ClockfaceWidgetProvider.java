@@ -1,5 +1,7 @@
 package ru.pvolan.clockface;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -13,7 +15,11 @@ import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.net.Uri;
+import android.widget.ImageView;
 import android.widget.RemoteViews;
 
 public class ClockfaceWidgetProvider extends AppWidgetProvider 
@@ -32,11 +38,12 @@ public class ClockfaceWidgetProvider extends AppWidgetProvider
         // Perform this loop procedure for each App Widget that belongs to this provider
 		for (int appWidgetId : appWidgetIds) 
         {
+			/*
            	RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_clockface);
 			views.setInt(R.id.widgetRoot, "setBackgroundColor", Color.MAGENTA);
 
 			appWidgetManager.updateAppWidget(appWidgetId, views);
-			
+			 */
 			updateClockValue(context, appWidgetManager, appWidgetId);
         }
 		
@@ -78,16 +85,57 @@ public class ClockfaceWidgetProvider extends AppWidgetProvider
 	//***************************************************
 	//Set time
 	
+	private static String fileToUse = "";
+	private final static String tempImageFileName1 = "clockImage1.png";
+	private final static String tempImageFileName2 = "clockImage2.png";
+	private final static String tempImageFileName3 = "clockImage3.png";
+	
 	private void updateClockValue(Context context, AppWidgetManager appWidgetManager,	int appWidgetId)
 	{
-		String currentTime = new SimpleDateFormat("kk:mm:ss").format(new Date());
+		Trace.Print("ClockfaceWidgetProvider.updateClockValue");
+		
+		if(fileToUse.equals(tempImageFileName1)){
+			fileToUse = tempImageFileName2;
+		}
+		else if(fileToUse.equals(tempImageFileName2))
+		{
+			fileToUse = tempImageFileName3;
+		}
+		else
+		{
+			fileToUse = tempImageFileName1;
+		}
 		
 		RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_clockface);
-		views.setTextViewText(R.id.textClock, "Clock " + currentTime);
+		
+		Bitmap b = drawClockface();
+		
+		try {
+		       FileOutputStream out = context.openFileOutput(fileToUse, Context.MODE_WORLD_READABLE);
+		       b.compress(Bitmap.CompressFormat.PNG, 100, out);
+		} catch (Exception e) {
+		       e.printStackTrace();
+		}
+
+
+		
+		views.setImageViewUri(R.id.imageClock, Uri.fromFile( context.getFileStreamPath(fileToUse)  ) );
 
 		appWidgetManager.updateAppWidget(appWidgetId, views);
+		Trace.Print("ClockfaceWidgetProvider.updateClockValue completed");
 	}
 	
+	
+	private Bitmap drawClockface()
+	{
+		ClockfaceDrawer drawer = ClockfaceApp.App.getClockfaceDrawer();
+		Bitmap b = drawer.getClockfaceBitmap();
+		Canvas c = new Canvas(b);
+		
+		drawer.drawClockface(c);		
+		
+		return b;
+	}
 	
 	
 	//***************************************************
