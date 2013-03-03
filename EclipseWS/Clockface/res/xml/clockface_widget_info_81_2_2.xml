@@ -4,7 +4,7 @@
     android:minWidth="144dp"
     android:minHeight="144dp"
     android:updatePeriodMillis="86400000"
-    android:initialLayout="@layout/widget_clockface"
+    android:initialLayout="@layout/widget_clockface_81"
     android:resizeMode="horizontal|vertical"
     android:widgetCategory="home_screen"
     >

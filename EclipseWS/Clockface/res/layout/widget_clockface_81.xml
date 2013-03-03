@@ -5,9 +5,9 @@
     android:id="@+id/clockView" 
    	android:layout_width="match_parent"
    	android:layout_height="match_parent"
-   	android:dial="@drawable/clockface_48_face"
-   	android:hand_hour="@drawable/clockface_48_hour"
-   	android:hand_minute="@drawable/clockface_48_min"
+   	android:dial="@drawable/clockface_81_face"
+   	android:hand_hour="@drawable/clockface_81_hour"
+   	android:hand_minute="@drawable/clockface_81_min"
    />
 	    
 
