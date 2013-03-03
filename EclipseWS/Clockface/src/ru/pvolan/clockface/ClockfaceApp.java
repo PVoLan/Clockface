@@ -12,9 +12,7 @@ import android.util.Log;
 public class ClockfaceApp extends Application 
 {
 	public static ClockfaceApp App;
-	
-	
-	private ClockfaceDrawer drawer;
+		
 	
 	@Override
 	public void onCreate() 
@@ -36,12 +34,4 @@ public class ClockfaceApp extends Application
 		
 	}
 	
-	
-	public ClockfaceDrawer getClockfaceDrawer() 
-	{
-		if(drawer == null){
-			drawer = new ClockfaceDrawer();
-		}
-		return drawer;
-	}
 }
