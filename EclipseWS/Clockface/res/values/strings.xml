@@ -5,6 +5,8 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Приложение установлено. Добавьте виджет на главный экран (длинный тап по свободному месту на главном экране - добавить - виджет)</string>
     
+    <string name="clockface_classic_4_4">Clockface 4x4</string>
+    
     <string name="clockface_81_2_2">Clockface 81 2x2</string>
     <string name="clockface_81_3_3">Clockface 81 3x3</string>
     <string name="clockface_81_4_4">Clockface 81 4x4</string>

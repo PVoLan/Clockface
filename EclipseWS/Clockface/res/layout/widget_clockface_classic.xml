@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+   	android:layout_height="match_parent">
+   	
+    <LinearLayout
+	    android:layout_width="match_parent"
+	   	android:layout_height="match_parent"
+	   	android:layout_weight="1"
+	   	>
+	   	
+	   	<FrameLayout 
+	   	    android:layout_width="match_parent"
+		   	android:layout_height="match_parent"
+		   	android:layout_weight="1"
+		   	android:background="@drawable/clockface_classic_face_1_1"
+		   	/>
+	   	
+	   	<FrameLayout 
+	   	    android:layout_width="match_parent"
+		   	android:layout_height="match_parent"
+		   	android:layout_weight="1"
+		   	android:background="@drawable/clockface_classic_face_1_2"
+		   	/>
+	   	
+	   	<FrameLayout 
+	   	    android:layout_width="match_parent"
+		   	android:layout_height="match_parent"
+		   	android:layout_weight="1"
+		   	android:background="@drawable/clockface_classic_face_1_3"
+		   	/>
+	    
+	    
+	</LinearLayout>
+	
+    
+    
+    <LinearLayout
+	    android:layout_width="match_parent"
+	   	android:layout_height="match_parent"
+	   	android:layout_weight="1"
+	   	>
+	    
+        <FrameLayout 
+	   	    android:layout_width="match_parent"
+		   	android:layout_height="match_parent"
+		   	android:layout_weight="1"
+		   	android:background="@drawable/clockface_classic_face_2_1"
+		   	/>
+        
+        <AnalogClock 
+		    android:id="@+id/clockView" 
+		    android:layout_width="match_parent"
+		   	android:layout_height="match_parent"
+		   	android:layout_weight="1"
+		   	android:dial="@drawable/clockface_classic_face_2_2_empty"
+		   	android:hand_hour="@drawable/clockface_classic_hour"
+		   	android:hand_minute="@drawable/clockface_classic_min"
+		   	android:background="@drawable/clockface_classic_face_2_2"
+		   />
+        
+        <FrameLayout 
+	   	    android:layout_width="match_parent"
+		   	android:layout_height="match_parent"
+		   	android:layout_weight="1"
+		   	android:background="@drawable/clockface_classic_face_2_3"
+		   	/>
+	    
+	</LinearLayout>
+	
+    
+    
+    <LinearLayout
+	    android:layout_width="match_parent"
+	   	android:layout_height="match_parent"
+	   	android:layout_weight="1"
+	   	>
+	   	
+	   	<FrameLayout 
+	   	    android:layout_width="match_parent"
+		   	android:layout_height="match_parent"
+		   	android:layout_weight="1"
+		   	android:background="@drawable/clockface_classic_face_3_1"
+		   	/>
+	   	
+	   	<FrameLayout 
+	   	    android:layout_width="match_parent"
+		   	android:layout_height="match_parent"
+		   	android:layout_weight="1"
+		   	android:background="@drawable/clockface_classic_face_3_2"
+		   	/>
+	   	
+	   	<FrameLayout 
+	   	    android:layout_width="match_parent"
+		   	android:layout_height="match_parent"
+		   	android:layout_weight="1"
+		   	android:background="@drawable/clockface_classic_face_3_3"
+		   	/>
+	    
+	    
+	</LinearLayout>
+    
+    
+</LinearLayout>
+    
+
+	    
+
+    <!--  
+android:dial="@drawable/clockface_81_face"
+   	android:hand_hour="@drawable/clockface_81_hour"
+   	android:hand_minute="@drawable/clockface_81_min"
+    -->
+    
+
+    
