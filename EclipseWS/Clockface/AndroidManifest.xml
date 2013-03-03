@@ -44,6 +44,16 @@
 		    <meta-data android:name="android.appwidget.provider"
 		               android:resource="@xml/clockface_widget_info_81_3_3" />
 		</receiver>
+		
+        
+        <receiver android:name="ru.pvolan.clockface.ClockfaceWidgetProvider_81_4_4" android:label="@string/clockface_81_4_4" >
+		    <intent-filter>
+		        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+		        <action android:name="ru.pvolan.clockface.TICK_WIDGET_UPDATE" /><!-- Duplicated in ClockfaceWidgetProvider -->
+		    </intent-filter>
+		    <meta-data android:name="android.appwidget.provider"
+		               android:resource="@xml/clockface_widget_info_81_4_4" />
+		</receiver>
         
     </application>
 
