@@ -24,6 +24,12 @@ import android.widget.RemoteViews;
 
 public class ClockfaceWidgetProvider extends AppWidgetProvider 
 {
-	
-	
+	@Override
+	public void onUpdate(Context context, AppWidgetManager appWidgetManager,
+			int[] appWidgetIds) {
+		// TODO Auto-generated method stub
+		super.onUpdate(context, appWidgetManager, appWidgetIds);
+		
+		GAHelper.TrackWidgetUpdate(context, this);
+	}
 }
