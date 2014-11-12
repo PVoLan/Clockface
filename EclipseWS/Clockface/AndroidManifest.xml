@@ -8,7 +8,7 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="17" />
+        android:targetSdkVersion="14" />
     
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -42,36 +42,19 @@
 		    <meta-data android:name="android.appwidget.provider"
 		               android:resource="@xml/clockface_widget_info_classic_4_4" />
 		</receiver>
-        
-        
-        <receiver android:name="ru.pvolan.clockface.ClockfaceWidgetProvider_81_2_2" android:label="@string/clockface_81_2_2" >
-		    <intent-filter>
-		        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-		        <action android:name="ru.pvolan.clockface.TICK_WIDGET_UPDATE" /><!-- Duplicated in ClockfaceWidgetProvider -->
-		    </intent-filter>
-		    <meta-data android:name="android.appwidget.provider"
-		               android:resource="@xml/clockface_widget_info_81_2_2" />
-		</receiver>
 		
         
-        <receiver android:name="ru.pvolan.clockface.ClockfaceWidgetProvider_81_3_3" android:label="@string/clockface_81_3_3" >
-		    <intent-filter>
-		        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-		        <action android:name="ru.pvolan.clockface.TICK_WIDGET_UPDATE" /><!-- Duplicated in ClockfaceWidgetProvider -->
-		    </intent-filter>
-		    <meta-data android:name="android.appwidget.provider"
-		               android:resource="@xml/clockface_widget_info_81_3_3" />
-		</receiver>
-		
         
-        <receiver android:name="ru.pvolan.clockface.ClockfaceWidgetProvider_81_4_4" android:label="@string/clockface_81_4_4" >
+        <receiver android:name="ru.pvolan.clockface.ClockfaceWidgetProvider_classic_3_3" android:label="@string/clockface_classic_3_3" >
 		    <intent-filter>
 		        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
 		        <action android:name="ru.pvolan.clockface.TICK_WIDGET_UPDATE" /><!-- Duplicated in ClockfaceWidgetProvider -->
 		    </intent-filter>
 		    <meta-data android:name="android.appwidget.provider"
-		               android:resource="@xml/clockface_widget_info_81_4_4" />
+		               android:resource="@xml/clockface_widget_info_classic_3_3" />
 		</receiver>
+        
+       
         
     </application>
 
