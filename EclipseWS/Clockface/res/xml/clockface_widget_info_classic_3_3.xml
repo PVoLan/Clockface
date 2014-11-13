@@ -6,14 +6,14 @@
     android:updatePeriodMillis="86400000"
     android:initialLayout="@layout/widget_clockface_classic"
     android:resizeMode="horizontal|vertical"
-    android:widgetCategory="home_screen"
+    android:widgetCategory="home_screen|keyguard"
+    android:previewImage="@drawable/clockface_classic_preview"
     >
     
     
     <!-- 
     
     android:configure="ru.pvolan.clockface.SetupActivity" 
-android:previewImage="@drawable/preview"
         android:initialKeyguardLayout="@layout/example_keyguard"
      -->
 
