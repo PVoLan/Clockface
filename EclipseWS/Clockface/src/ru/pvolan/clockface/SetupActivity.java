@@ -18,17 +18,6 @@ public class SetupActivity extends Activity {
         
         //GAServiceManager.getInstance().
         GAServiceManager.getInstance().dispatch();
-        
-        
-        Button b = (Button)findViewById(R.id.buttonCrash);
-        b.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				throw new RuntimeException("My own one");				
-			}
-		});
     }
 
 
